@@ -9,8 +9,11 @@ attrs==22.2.0
 azure-common==1.1.28
 azure-core==1.26.3
 azure-identity==1.12.0
+azure-mgmt-compute==29.1.0
 azure-mgmt-core==1.3.2
+azure-mgmt-network==23.0.0
 azure-mgmt-resource==23.0.0
+azure-mgmt-sql==3.0.1
 azure-mgmt-storage==21.0.0
 azure-storage-blob==12.16.0
 Babel==2.12.1
@@ -82,6 +85,7 @@ pure-eval==0.2.2
 pycparser==2.21
 Pygments==2.14.0
 PyJWT==2.6.0
+pyodbc==4.0.39
 pyrsistent==0.19.3
 python-dateutil==2.8.2
 python-dotenv==1.0.0
