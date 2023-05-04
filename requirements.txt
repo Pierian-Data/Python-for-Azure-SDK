@@ -11,7 +11,9 @@ azure-core==1.26.3
 azure-identity==1.12.0
 azure-mgmt-compute==29.1.0
 azure-mgmt-core==1.3.2
+azure-mgmt-costmanagement==3.0.0
 azure-mgmt-network==23.0.0
+azure-mgmt-rdbms==10.1.0
 azure-mgmt-resource==23.0.0
 azure-mgmt-sql==3.0.1
 azure-mgmt-storage==21.0.0
@@ -61,6 +63,7 @@ mistune==2.0.5
 msal==1.21.0
 msal-extensions==1.0.0
 msrest==0.7.1
+mysql-connector-python==8.0.33
 nbclassic==0.5.3
 nbclient==0.7.2
 nbconvert==7.2.10
@@ -79,7 +82,10 @@ platformdirs==3.2.0
 portalocker==2.7.0
 prometheus-client==0.16.0
 prompt-toolkit==3.0.38
+protobuf==3.20.3
 psutil==5.9.4
+psycopg2==2.9.6
+psycopg2-binary==2.9.6
 ptyprocess==0.7.0
 pure-eval==0.2.2
 pycparser==2.21
