@@ -101,17 +101,14 @@ def TimerTrigger(myTimer: func.TimerRequest) -> None:
     TIME_ZONE = 'America%2FNew_York'
     WEATHER_URL = f'https://api.open-meteo.com/v1/forecast?latitude={str(LAT)}&longitude={str(LONG)}&current_weather=true&timezone={TIME_ZONE}'
 
-    if myTimer.past_due:
-        logging.info('Pulling weather data for Boston from Open-Meteo')
-        response = requests.get(WEATHER_URL)
-        data = response.json()
-        current_weather = data.current_weather
-        weather_info = """
-        Current weather data for Boston, MA at {current_weather.time}:
-            - Temperature - {current_weather.temperature} Celsius
-            - Wind speed - {current_weather.windspeed} km/hour
-            - Wind direction - {current_weather.winddirection} degrees
-        """
-        logging.info(weather_info)
-
-    logging.info('Python timer trigger function executed.')
+    logging.info('Pulling weather data for Boston from Open-Meteo')
+    response = requests.get(WEATHER_URL)
+    data = response.json()
+    current_weather = data['current_weather']
+    weather_info = f"""
+    Current weather data for Boston, MA at {current_weather.get('time')}:
+        - Temperature - {current_weather.get('temperature')} Celsius
+        - Wind speed - {current_weather.get('windspeed')} km/hour
+        - Wind direction - {current_weather.get('winddirection')} degrees
+    """
+    logging.info(weather_info)
