@@ -6,6 +6,7 @@ BASEDIR = os.path.abspath(os.path.dirname(__file__))
 # Load environment variables
 load_dotenv(os.path.join(BASEDIR, '.env'))
 AZURE_SUBSCRIPTION_ID = os.getenv('AZURE_SUBSCRIPTION_ID')
+DATA_LAKE_CONNECTION_STRING = os.getenv('DATA_LAKE_CONNECTION_STRING')
 CONNECTION_STRING = os.getenv('CONNECTION_STRING')
 AZURE_CLIENT_ID = os.getenv('AZURE_CLIENT_ID')
 AZURE_TENANT_ID = os.getenv('AZURE_TENANT_ID')
