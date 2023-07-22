@@ -29,22 +29,4 @@ def TimeZoneHttpTrigger(req: func.HttpRequest) -> func.HttpResponse:
 
     timezone = req.get_json()['timezone']
 
-    if not timezone:
-        try:
-            req_body = req.get_body()
-        except ValueError:
-            pass
-        else:
-            name = req_body.get('timezone')
-
-    if timezone:
-        current_time = datetime.now(pytz.timezone(timezone)).strftime('%H:%M %A %d %B %Y')
-        return func.HttpResponse(
-            json.dumps({'timezone': timezone, 'current_time': current_time}),
-            mimetype='application/json'
-        )
-    else:
-        return func.HttpResponse(
-             "Please send an appropriate request to the API.",
-             status_code=200
-        )
+    return func.HttpResponse(f'{timezone}')
